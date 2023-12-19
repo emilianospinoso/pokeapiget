@@ -9,13 +9,13 @@ import java.util.List;
 @Service
 public class PokemonServiceImpl implements PokemonService {
 
-    private final String API_URL = "https://pokeapi.co/api/v2/pokemon/";
+	private final String API_URL = "https://pokeapi.co/api/v2/pokemon/";
 
-    @Override
-    public List<Pokemon> getAllPokemon() {
-        RestTemplate restTemplate = new RestTemplate();
-        PokemonResponse response = restTemplate.getForObject(API_URL, PokemonResponse.class);
-        System.out.println("implementacion 1");
-        return response.getResults();
-    }
+	@Override
+	public List<Pokemon> getAllPokemon() {
+		RestTemplate restTemplate = new RestTemplate();
+		PokemonResponse response = restTemplate.getForObject(API_URL, PokemonResponse.class);
+		System.out.println("implementacion 1");
+		return response.getResults();
+	}
 }
